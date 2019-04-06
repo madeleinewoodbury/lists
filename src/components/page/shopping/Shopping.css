@@ -1,0 +1,13 @@
+.card {
+  width: 50%;
+  margin: 2rem auto;
+}
+
+.item-list {
+  text-align: center;
+}
+
+.item-list li {
+  list-style: none;
+  padding: 0.5rem 0;
+}
