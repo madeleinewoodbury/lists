@@ -11,10 +11,10 @@ const Home = () => {
           Select a list to get started.
         </p>
         <div className="home-links">
-          <a href="/" className="btn">
+          <a href="/shopping" className="btn">
             Shopping List
           </a>
-          <a href="/" className="btn">
+          <a href="/todo" className="btn">
             Todo List
           </a>
         </div>

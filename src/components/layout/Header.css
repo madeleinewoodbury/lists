@@ -26,3 +26,13 @@
   list-style: none;
   margin: 0 1rem;
 }
+
+.nav-links li a {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.2rem;
+  border: hidden;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid #fff;
+}

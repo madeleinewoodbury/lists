@@ -8,8 +8,12 @@ const Header = () => {
         Lists
       </a>
       <ul className="nav-links">
-        <li className="nav-link">Shopping List</li>
-        <li className="nav-link">Todo List</li>
+        <li className="nav-link">
+          <a href="/shopping">Shopping List</a>
+        </li>
+        <li className="nav-link">
+          <a href="/todo">Todo List</a>
+        </li>
       </ul>
     </nav>
   );
