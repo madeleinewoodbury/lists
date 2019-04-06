@@ -1,10 +1,17 @@
 import React from "react";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
-      <h1>Welcome!</h1>
-    </div>
+    <nav className="navbar">
+      <a href="/" className="brand">
+        Lists
+      </a>
+      <ul className="nav-links">
+        <li className="nav-link">Shopping List</li>
+        <li className="nav-link">Todo List</li>
+      </ul>
+    </nav>
   );
 };
 
