@@ -41,6 +41,17 @@ export class Provider extends Component {
       }
     ],
 
+    todoItems: [
+      {
+        id: 201,
+        name: "Make Pizza"
+      },
+      {
+        id: 202,
+        name: "Watch Movie"
+      }
+    ],
+
     // Calls the action from the reducer
     dispatch: action => this.setState(state => reducer(state, action))
   };
