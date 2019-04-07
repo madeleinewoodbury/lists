@@ -12,12 +12,12 @@ class ShoppingList extends Component {
           const { shoppingItems } = value;
           return (
             <React.Fragment>
-              <AddShoppingItem />
               <div id="shopping-list">
                 <h1>
                   Shopping List <i className="far fa-edit" />
                 </h1>
-                <input type="text" placeholder="Add item" name="item" />
+                <AddShoppingItem />
+                {/* <input type="text" placeholder="Add item" name="item" /> */}
                 <ul className="shopping-list">
                   {shoppingItems.map(item => (
                     <Shopping key={item.id} item={item} />
