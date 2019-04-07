@@ -4,11 +4,12 @@ import { Consumer } from "../../../context";
 import "./Todo.css";
 
 class Todo extends Component {
-  // onDeleteClick = (id, dispatch) => {
-  //   dispatch({ type: "DELETE_SHOPPING_ITEM", payload: id });
-  // };
+  onDeleteClick = (id, dispatch) => {
+    dispatch({ type: "DELETE_TODO_ITEM", payload: id });
+  };
   render() {
-    const { name } = this.props.item;
+    const { id, name } = this.props.item;
+    console.log(id);
     return (
       <Consumer>
         {value => {
@@ -16,7 +17,10 @@ class Todo extends Component {
           return (
             <li className="todo-item">
               <span className="delete">
-                <i className="fas fa-trash-alt" />
+                <i
+                  className="fas fa-trash-alt"
+                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
+                />
               </span>
               {name}
             </li>

@@ -16,6 +16,11 @@ const reducer = (state, action) => {
         ...state,
         shoppingItems: [action.payload, ...state.shoppingItems]
       };
+    case "DELETE_TODO_ITEM":
+      return {
+        ...state,
+        todoItems: state.todoItems.filter(item => item.id !== action.payload)
+      };
     case "ADD_TODO_ITEM":
       return {
         ...state,
