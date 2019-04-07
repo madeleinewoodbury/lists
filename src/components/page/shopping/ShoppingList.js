@@ -14,7 +14,7 @@ class ShoppingList extends Component {
             <React.Fragment>
               <div id="shopping-list">
                 <h1>
-                  Shopping List <i className="far fa-edit" />
+                  Shopping List <i className="fas fa-cart-arrow-down" />
                 </h1>
                 <AddShoppingItem />
                 {/* <input type="text" placeholder="Add item" name="item" /> */}

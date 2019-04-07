@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Consumer } from "../../../context";
+import uuid from "uuid";
 import "./Shopping.css";
 
 class AddShoopingItem extends Component {
@@ -14,7 +15,7 @@ class AddShoopingItem extends Component {
     const { name, quantity } = this.state;
 
     const newItem = {
-      id: 12,
+      id: uuid(),
       name,
       quantity
     };

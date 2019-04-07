@@ -13,7 +13,9 @@ class TodoList extends Component {
           return (
             <React.Fragment>
               <div id="todo-list">
-                <h1>Todo List</h1>
+                <h1>
+                  Todo List <i className="far fa-edit" />
+                </h1>
                 <AddTodoItem />
                 <ul className="todo-list">
                   {todoItems.map(item => (
