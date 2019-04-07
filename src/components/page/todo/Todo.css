@@ -1,0 +1,100 @@
+#todo-list {
+  max-width: 400px;
+  margin: 2rem auto;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background: #f7f7f7;
+}
+
+#todo-list h1 {
+  background: #e35d5b;
+  color: white;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+#todo-list form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputs {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+form input {
+  font-size: 1.2rem;
+  background: #fff;
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 1.2rem;
+  color: #333;
+  border: 2px solid #f4f4f4;
+}
+
+#todo-list input:focus {
+  background: white;
+  border: 3px solid #e35d5b;
+  outline: none;
+}
+
+#todo-list ul {
+  list-style: none;
+}
+
+.todo-item {
+  background: #fff;
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+}
+
+.todo-item:nth-of-type(even) {
+  background: #f7f7f7;
+}
+
+.delete {
+  background: #e74c3c;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  transition: 0.2s linear;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.todo-item:hover .delete {
+  width: 40px;
+  opacity: 1;
+}
+
+.completed {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.fa-edit {
+  float: right;
+}
+
+button {
+  margin: 0.5rem auto;
+  width: 80%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+  background: #e35d5b;
+}
+
+button:hover {
+  background: #fff;
+  color: #e35d5b;
+  border-color: #e35d5b;
+}

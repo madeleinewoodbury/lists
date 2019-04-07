@@ -13,7 +13,6 @@ class Shopping extends Component {
       <Consumer>
         {value => {
           const { dispatch } = value;
-          console.log(value);
           return (
             <li className="shopping-item">
               <span className="delete">
