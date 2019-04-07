@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Consumer } from "../../../context";
-import TextInputGroup from "../../layout/TextInputGroup";
 import "./Shopping.css";
 
 class Shopping extends Component {
@@ -18,8 +17,12 @@ class Shopping extends Component {
           return (
             <li className="shopping-item">
               <span className="delete">
-                <i className="fas fa-trash-alt" />
+                <i
+                  className="fas fa-trash-alt"
+                  onClick={this.onDeleteClick.bind(this, id, dispatch)}
+                />
               </span>
+              <span className="quantity">{quantity}</span>
               {name}
             </li>
           );

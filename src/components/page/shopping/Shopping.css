@@ -5,7 +5,7 @@
   background: #f7f7f7;
 }
 
-h1 {
+#shopping-list h1 {
   background: #e35d5b;
   color: white;
   margin: 0;
@@ -14,7 +14,22 @@ h1 {
   font-size: 1.5rem;
 }
 
-ul {
+#shopping-list input {
+  font-size: 1.2rem;
+  background: #f7f7f7;
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 1.2rem;
+  color: #333;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+#shopping-list input:focus {
+  background: white;
+  border: 3px solid #e35d5b;
+  outline: none;
+}
+
+#shopping-list ul {
   list-style: none;
 }
 
@@ -29,6 +44,10 @@ ul {
   background: #f7f7f7;
 }
 
+.quantity {
+  margin-right: 1rem;
+}
+
 .delete {
   background: #e74c3c;
   height: 40px;
@@ -39,27 +58,12 @@ ul {
   display: inline-block;
   transition: 0.2s linear;
   opacity: 0;
+  cursor: pointer;
 }
 
-li:hover .delete {
+.shopping-item:hover .delete {
   width: 40px;
   opacity: 1;
-}
-
-input {
-  font-size: 18px;
-  background: #f7f7f7;
-  width: 100%;
-  padding: 13px 13px 13px 20px;
-  box-sizing: border-box;
-  color: #2980b9;
-  border: 3px solid rgba(0, 0, 0, 0);
-}
-
-input:focus {
-  background: white;
-  border: 3px solid #2980b9;
-  outline: none;
 }
 
 .completed {

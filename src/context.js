@@ -11,10 +11,10 @@ const reducer = (state, action) => {
           item => item.id !== action.payload
         )
       };
-    case "DELETE_LIST_ITEM":
+    case "ADD_SHOPPING_ITEM":
       return {
         ...state,
-        listItems: state.listItems.filter(item => item.id !== action.payload)
+        shoppingItems: [action.payload, ...state.shoppingItems]
       };
     default:
       return state;

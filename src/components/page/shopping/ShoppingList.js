@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import Shopping from "./Shopping";
 import { Consumer } from "../../../context";
+import Shopping from "./Shopping";
+import AddShoppingItem from "./AddShoopingItem";
 import "./Shopping.css";
 
-class ShoppingItems extends Component {
+class ShoppingList extends Component {
   render() {
     return (
       <Consumer>
@@ -11,6 +12,7 @@ class ShoppingItems extends Component {
           const { shoppingItems } = value;
           return (
             <React.Fragment>
+              <AddShoppingItem />
               <div id="shopping-list">
                 <h1>
                   Shopping List <i className="far fa-edit" />
@@ -30,4 +32,4 @@ class ShoppingItems extends Component {
   }
 }
 
-export default ShoppingItems;
+export default ShoppingList;

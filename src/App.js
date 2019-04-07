@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
 import Header from "./components/layout/Header";
 import Home from "./components/page/Home";
-import ShoppingItems from "./components/page/shopping/ShoppingItems";
+import ShoppingList from "./components/page/shopping/ShoppingList";
 import { Provider } from "./context";
+
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
             <Header />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/shopping" component={ShoppingItems} />
+              <Route exact path="/shopping" component={ShoppingList} />
             </Switch>
           </div>
         </Router>
