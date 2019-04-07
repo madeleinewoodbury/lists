@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Consumer } from "../../../context";
+import TextInputGroup from "../../layout/TextInputGroup";
 import "./Shopping.css";
 
 class Shopping extends Component {
   onDeleteClick = (id, dispatch) => {
-    dispatch({ type: "DELETE_ITEM", payload: id });
+    dispatch({ type: "DELETE_SHOPPING_ITEM", payload: id });
   };
   render() {
     const { id, name, quantity } = this.props.item;
@@ -13,21 +14,14 @@ class Shopping extends Component {
       <Consumer>
         {value => {
           const { dispatch } = value;
+          console.log(value);
           return (
-            <div>
-              <div className="card">
-                <ul className="item-list">
-                  <li>Item: {name}</li>
-                  <li>Quantity:{quantity}</li>
-                  <li>
-                    <i
-                      onClick={this.onDeleteClick.bind(this, id, dispatch)}
-                      className="fas fa-trash"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <li className="shopping-item">
+              <span className="delete">
+                <i className="fas fa-trash-alt" />
+              </span>
+              {name}
+            </li>
           );
         }}
       </Consumer>
