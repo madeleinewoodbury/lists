@@ -16,6 +16,11 @@ const reducer = (state, action) => {
         ...state,
         shoppingItems: [action.payload, ...state.shoppingItems]
       };
+    case "ADD_TODO_ITEM":
+      return {
+        ...state,
+        todoItems: [action.payload, ...state.todoItems]
+      };
     default:
       return state;
   }

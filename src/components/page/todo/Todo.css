@@ -15,13 +15,8 @@
 }
 
 #todo-list form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-inputs {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
 }
 
 form input {
@@ -50,7 +45,7 @@ form input {
   color: #666;
 }
 
-.todo-item:nth-of-type(even) {
+.todo-item:nth-of-type(odd) {
   background: #f7f7f7;
 }
 
